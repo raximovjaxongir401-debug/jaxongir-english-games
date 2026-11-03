@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #f6f1e4;
+    color: #1c2b2a;
+    font-family: "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* Custom subtle paper texture or line style */
+  ::selection {
+    background-color: #c79a3d;
+    color: #1c2b2a;
+  }
+}
+
+/* 3D Flip Card classes */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Retro Paper tactile buttons & cards */
+.retro-card {
+  background-color: #ffffff;
+  border: 1.5px solid #1c2b2a;
+  border-radius: 6px;
+  box-shadow: 4px 4px 0px #1c2b2a;
+  transition: all 0.15s ease-in-out;
+}
+
+.retro-card-paper2 {
+  background-color: #efe6d0;
+  border: 1.5px solid #1c2b2a;
+  border-radius: 6px;
+  box-shadow: 4px 4px 0px #1c2b2a;
+}
+
+.retro-btn {
+  border: 1.5px solid #1c2b2a;
+  border-radius: 6px;
+  box-shadow: 3px 3px 0px #1c2b2a;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+  user-select: none;
+}
+
+.retro-btn:active:not(:disabled) {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #1c2b2a;
+}
+
+.retro-btn:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  box-shadow: 1px 1px 0px #1c2b2a;
+}
+
+/* Monospace badge font */
+.font-label {
+  font-family: Menlo, "Courier New", monospace;
+}
+
+/* Smooth custom scrollbar for tables & lists */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #efe6d0;
+  border-left: 1px solid #c9bd9c;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #28524c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #173330;
+}
